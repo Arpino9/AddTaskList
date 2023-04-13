@@ -1,0 +1,21 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 要設定項目
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const Title = "newList";   // 1.リスト名
+const ListCount  = 80;     // 2.タスク数
+
+function AddTaskList() {
+  var newList ={
+    "title" : Title
+  };
+
+  var list = Tasks.Tasklists.insert(newList);
+
+for (var i = ListCount; i >= 1; i--){
+  var task = {
+                title: '問' + i,
+              }
+
+    task = Tasks.Tasks.insert(task, list.id);
+  }
+}
